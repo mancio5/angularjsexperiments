@@ -1,0 +1,12 @@
+<section>
+    <div>
+        <ul>
+            <li ng-repeat="project in projects">
+                <h3><a ng-href="#/projects/{{project.name}}">{{project.name}}</h3>
+            </li>
+        </ul>
+    </div>
+    <div class="test">
+        {{projects | json}}
+    </div>
+</section>
