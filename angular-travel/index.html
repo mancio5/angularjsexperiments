@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="website">
+<html lang="en" ng-app="travel_app">
 <head>
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
@@ -31,7 +31,15 @@
     <nav></nav>
 </header>
 <div id="container">
-    <div ng-view></div>
+    <div ng-controller="DestinationsCtrl">
+        <ul>
+            <li ng-repeat="destination in destinations">
+                
+                <a href="#/destination/{{destination.city}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+                <a href="#/destination/{{destination.city}}">{{destination.city}}</a>
+            </li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
