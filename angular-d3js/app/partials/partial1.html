@@ -1,0 +1,10 @@
+<div ng-ctrl="VisCtrl">
+	<p>This is the partial for view 1.</p>
+	<form ng-submit="getCommitData()">
+	    User: <input ng-model="user"></input>
+	    Repo: <input ng-model="repo"></input>
+	    <input type="submit" value="Get Data">
+	    Grouped <input type="checkbox" ng-model="grouped">
+	</form>
+	<gh-visualization val="data"></gh-visualization>
+</div>
