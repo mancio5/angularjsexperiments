@@ -1,0 +1,37 @@
+<section ng-controller="halfFaceCtrl" id="halfFaceCtrl" class="container">
+	<div class="row">
+		<h1 class="span">{{title}}</h1><span>{{version}}</span>
+	</div>
+	<div class="row">
+		<div id="halfFaceMod" class="span4">
+			<div class="row">
+				<div id="left_img" class="split span">
+					<a ng-click="load_left()"><img ng-src="{{left_img.src}}"></a>
+				</div>
+				<div id="right_img" class="split span4">
+					<a ng-click="load_right()"><img ng-src="{{right_img.src}}" ></a>
+				</div>
+			</div>
+			<div id="actions" class="row mt-dbl">
+				<a ng-click="saveImg()" class="btn btn-large btn-primary">Save</a>
+			</div>
+		</div>
+		<div id="saved" class="span8">
+			<ul class="row">
+				<li ng-repeat="saved in saved_list" class="span2 mb-dbl pic_saved" popover="{{popOver.message}}" popover-trigger="mouseenter">
+					<div id="left_img" class="split span">
+						<img ng-src="{{saved.l.src}}">
+					</div>
+					<div id="right_img" class="split span">
+						<img ng-src="{{saved.r.src}}">
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="doc">
+	<div class="container" ng-bind-html-unsafe="description">
+	</div>
+</section>
