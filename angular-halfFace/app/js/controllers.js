@@ -2,20 +2,8 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-	controller('LayerCtrl', ['$scope',function($scope) {
-		$scope.imgs =[
-			{"type": "back-img","src":"img/test1.gif"},
-			{"type": "middle-img","src":"img/test2.gif"},
-			{"type": "front-img","src":"img/test3.gif"},
-		]
-
-		$scope.back_img = $scope.imgs[0];
-		$scope.middle_img = $scope.imgs[1];
-		$scope.front_img = $scope.imgs[2];
-
-  	}])
-  .controller('halfFaceCtrl', ['$scope',function($scope) {
+angular.module('halfFace.controllers', [])
+  	.controller('halfFaceCtrl', ['$scope',function($scope) {
   		$scope.title = "PhotooSplit";
   		$scope.version = " v1.0";
   		$scope.description = "images by Martin Schoeller <a href='http://martinschoeller.com/'>http://martinschoeller.com/</a>";
@@ -68,4 +56,4 @@ angular.module('myApp.controllers', []).
 		$scope.popOver = {
 			"message":"<img>sdas</img>"
 		}
-  }]);
+  	}]);
