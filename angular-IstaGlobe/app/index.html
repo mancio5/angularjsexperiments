@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" ng-app="istaGlobe">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/flat-ui.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+    <div ng-controller="istaListCtrl">
+        <section class="container">
+            <div class="row">
+                <h1 class="span">{{title}}</h1><span>{{version}}</span>
+            </div>
+            <h1>
+                <img src="assets/instagram-logo.png" /> 
+                #<input type="text" ng-model="tag" ng-change="tagChange()" ng-init="tag = 'metronetlife'" size="{{ tag.length }}" />
+            </h1>
+        </section>
+        <section id="list" class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1">
+                    <ul>
+                        <li class="" ng-repeat="img in imgs">
+                            <img ng-src="{{img.src}}" >
+                        </li>
+                    </ul>                
+                </div>
+                <div class="span2">
+                    <ul>
+                        <li class="span6" ng-repeat="img in imgs">
+                            <img ng-src="{{img.src}}" >
+                        </li>
+                    </ul> 
+                </div>
+                <div class="span6">
+                    <ul>
+                        <li class="span3" ng-repeat="img in imgs">
+                            <img ng-src="{{img.src}}" >
+                        </li>
+                    </ul> 
+                </div>
+                <div class="span2">
+                    <ul>
+                        <li class="span6" ng-repeat="img in imgs">
+                            <img ng-src="{{img.src}}" >
+                        </li>
+                    </ul> 
+                </div>
+                <div class="span1">
+                    <ul>
+                        <li class="" ng-repeat="img in imgs">
+                            <img ng-src="{{img.src}}" >
+                        </li>
+                    </ul>                
+                </div>
+            </div>
+            <!-- <ul id="slides">
+                <li ng-repeat="image in images" class="slide" ng-class="{ active : image.isActive }">
+                    <figure>
+                        <img ng-src="{{ image.images.standard_resolution.url }}" class="image" />
+                    </figure>
+                </li>
+            </ul> -->
+        </section>
+        <section class="doc mt-dbl">
+            <div class="container" ng-bind-html-unsafe="description">
+            </div>
+        </section>
+    </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="lib/bootstrap/ui-bootstrap-tpls-0.4.0.min.js"></script>
+  
+</body>
+</html>

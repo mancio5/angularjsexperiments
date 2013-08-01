@@ -1,0 +1,12 @@
+<p>This is the partial for view 1.</p>
+<input type="text" ng-model="opacity1" placeholder="Opacity">
+<h1>Layer 1 Opacity, {{ opacity1 }}!</h1>
+<input type="text" ng-model="opacity2" placeholder="Opacity">
+<h1>Layer 1 Opacity, {{ opacity2 }}!</h1>
+<input type="text" ng-model="opacity3" placeholder="Opacity">
+<h1>Layer 1 Opacity, {{ opacity3 }}!</h1>
+<div ng-controller="LayerCtrl" id="layerCtrl">
+<div id="back"><img ng-src="{{back_img.src}}" style="opacity:{{opacity1}}"></div>
+<div id="middle"><img ng-src="{{middle_img.src}}" style="opacity:{{opacity2}}"></div>
+<div id="front"><img ng-src="{{front_img.src}}" style="opacity:{{opacity3}}"></div>
+</div>
